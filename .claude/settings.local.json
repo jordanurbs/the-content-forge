@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:*)",
+      "Write",
+      "Edit",
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(test:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "Bash(pip:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "Bash(awk:*)",
+      "Bash(tee:*)",
+      "Bash(printf:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)",
+      "Bash(./scripts/*)",
+      "Bash(bash scripts/*)",
+      "Bash(./tools/broll-animator/render.sh:*)",
+      "Bash(./tools/broll-animator/render-cards.sh:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [],
+  "enableAllProjectMcpServers": true
+}

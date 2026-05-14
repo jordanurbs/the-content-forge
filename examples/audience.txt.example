@@ -1,0 +1,9 @@
+Indie SaaS founders and solo developers who want to learn AI-assisted development
+through hands-on, build-in-public lessons. They've shipped at least one product, are
+comfortable in a terminal, and prefer concrete examples (specific tools, real costs,
+exact timeframes) over abstract theory. They distrust hype and reward honesty about
+trade-offs and failures.
+
+Copy this file to `.audience.txt` at the project root and rewrite for your audience.
+Agents (especially Lesson Writer, Script Writer, Blog Writer) read it to calibrate
+vocabulary, examples, and assumed-knowledge baseline.

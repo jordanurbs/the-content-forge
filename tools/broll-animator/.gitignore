@@ -1,0 +1,5 @@
+node_modules/
+dist/
+# Ignore copied storyboard images (only test.png and .gitkeep are permanent)
+public/*.png
+!public/test.png

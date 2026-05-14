@@ -1,0 +1,15 @@
+{
+  "_comment": "Theme config consumed by the Slidev scaffold (via base.css CSS vars) and the Remotion broll-animator cards (via tools/broll-animator/src/theme.ts). Replace these defaults with your project's brand colors.",
+  "colors": {
+    "primary": "#0a0e1a",
+    "accent": "#FFD700",
+    "secondary": "#00FFFF"
+  },
+  "fonts": {
+    "heading": "system-ui, -apple-system, sans-serif",
+    "body": "system-ui, -apple-system, sans-serif",
+    "mono": "'Courier Prime Code', ui-monospace, Menlo, monospace"
+  },
+  "brandLogo": "",
+  "brandName": ""
+}

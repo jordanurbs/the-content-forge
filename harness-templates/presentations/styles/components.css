@@ -1,0 +1,165 @@
+/**
+ * {{PROJECT_NAME}} Component Styles for Slidev
+ */
+
+/* Strategy Card */
+.strategy-card {
+  background: rgba(26, 39, 68, 0.8);
+  border: 1px solid var(--navy-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin: 1rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.strategy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--neon-cyan);
+}
+
+/* Info Card */
+.info-card {
+  background: rgba(26, 39, 68, 0.8);
+  border: 1px solid var(--navy-light);
+  border-left: 4px solid var(--neon-cyan);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.info-card.warning {
+  border-left-color: var(--warning-red);
+}
+
+.info-card.success {
+  border-left-color: var(--success-green);
+}
+
+/* Callout Card */
+.callout-card {
+  background: rgba(26, 39, 68, 0.6);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: left;
+  border-left: 4px solid;
+}
+
+.callout-card.critical {
+  border-left-color: var(--warning-red);
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.callout-card.action {
+  border-left-color: var(--success-green);
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.callout-card.caution {
+  border-left-color: var(--accent-gold);
+  background: rgba(255, 165, 0, 0.1);
+}
+
+.callout-card.protip {
+  border-left-color: var(--neon-cyan);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.callout-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.callout-label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.callout-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Grid Layouts */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-layout.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-layout.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Health Break */
+.health-break-container {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.health-break-container img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--success-green);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.health-instruction {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid var(--success-green);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.health-instruction h3 {
+  color: var(--success-green);
+  margin-bottom: 0.5rem;
+}
+
+.health-instruction p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  max-width: 1050px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+/* Duration Badge */
+.duration-badge {
+  display: inline-block;
+  background: var(--navy-medium);
+  border: 1px solid var(--neon-cyan);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1rem;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "broll-animator",
+  "version": "1.0.0",
+  "description": "Remotion tool for animating storyboard B-roll images with 3D camera movements on green screen",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "bash render.sh"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.0",
+    "zod": "3.22.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.5.0"
+  }
+}

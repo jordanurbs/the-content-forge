@@ -1,0 +1,29 @@
+{
+  "name": "module-2-kbase-presentations",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides/2.1.1.md",
+    "dev:2.1.1": "slidev slides/2.1.1.md",
+    "dev:2.2.1": "slidev slides/2.2.1.md",
+    "dev:2.3.1": "slidev slides/2.3.1.md",
+    "dev:2.4.1": "slidev slides/2.4.1.md",
+    "dev:2.5.1": "slidev slides/2.5.1.md",
+    "dev:2.6.1": "slidev slides/2.6.1.md",
+    "dev:2.7.1": "slidev slides/2.7.1.md",
+    "dev:2.8.1": "slidev slides/2.8.1.md",
+    "dev:2.8.2": "slidev slides/2.8.2.md",
+    "dev:2.8.3": "slidev slides/2.8.3.md",
+    "dev:2.8.4": "slidev slides/2.8.4.md",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.0.0",
+    "@slidev/theme-default": "latest"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.0",
+    "@unocss/reset": "^65.0.0",
+    "unocss": "^65.0.0"
+  }
+}
