@@ -101,40 +101,6 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Health Break */
-.health-break-container {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
-.health-break-container img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--success-green);
-  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
-}
-
-.health-instruction {
-  background: rgba(0, 255, 136, 0.1);
-  border: 1px solid var(--success-green);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.health-instruction h3 {
-  color: var(--success-green);
-  margin-bottom: 0.5rem;
-}
-
-.health-instruction p {
-  color: var(--text-secondary);
-  font-size: 1rem;
-}
-
 /* Image Container */
 .image-container {
   width: 100%;

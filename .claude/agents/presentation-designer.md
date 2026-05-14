@@ -40,9 +40,8 @@ Every presentation follows this sequence:
 2. **Hero Image** (REQUIRED) — Full-bleed hero illustration: `./images/<M.S.L>-<slug>.png`
 3. **What You'll Master** — 3 key objectives using StrategyCard with v-click
 4. **Content Slides** (5-12) — Main lesson content, progressive reveals
-5. **Health Break** — Midpoint, use health-break layout + HealthBreak component
-6. **Checkpoint** — Ready-when + common-concerns using InfoCard
-7. **What's Next** — Next lesson preview using InfoCard
+5. **Checkpoint** — Ready-when + common-concerns using InfoCard
+6. **What's Next** — Next lesson preview using InfoCard
 
 ## Slide Count
 
@@ -76,13 +75,6 @@ Use the Vue components defined in the scaffold:
 </CalloutCard>
 ```
 
-### HealthBreak
-```html
-<HealthBreak title="Exercise Name" image="./images/health-break-<exercise-slug>.png" imageAlt="illustration of the exercise">
-  <p>Instructions</p>
-</HealthBreak>
-```
-
 ## Brand Colors
 
 | Token | Hex | Usage |
@@ -95,7 +87,7 @@ Use the Vue components defined in the scaffold:
 | navy-light | #2A3F5F | Borders, subtle backgrounds |
 | accent-gold | #FFA500 | Warnings, third accent |
 | warning-red | #FF4444 | Errors, critical callouts |
-| success-green | #00FF88 | Success states, health breaks |
+| success-green | #00FF88 | Success states |
 | text-primary | #FFFFFF | Main text |
 | text-secondary | #B0C4DE | Body text |
 | text-muted | #708090 | Subtle text |
@@ -149,14 +141,12 @@ Use `v-click` on individual elements for progressive reveals:
 
 ## Rules
 
-- ALWAYS use the standard slide sequence (cover > hero image > content > health break > checkpoint > what's next)
+- ALWAYS use the standard slide sequence (cover > hero image > content > checkpoint > what's next)
 - ALWAYS include the hero image slide with `./images/<M.S.L>-<slug>.png`
-- ALWAYS include `image` prop on HealthBreak component: `image="./images/health-break-<exercise-slug>.png"`
 - ALWAYS use `v-click` for progressive reveals on key content
 - Use Vue components (StrategyCard, InfoCard, etc.) instead of raw HTML cards
 - Keep text concise — slides are visual, not walls of text
 - 10-18 slides per lesson, no exceptions
-- Include health break at the midpoint
 - Prefer UnoCSS shortcuts over inline styles where the shortcut exists
 - Match the brand color palette exactly
 

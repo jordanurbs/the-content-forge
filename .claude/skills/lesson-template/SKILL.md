@@ -1,7 +1,7 @@
 ---
 name: lesson-template
 version: 1.0.0
-description: "HTML template structure and formatting rules for {{PROJECT_NAME}} Skool lessons. Auto-loaded by Lesson Writer and Quality Reviewer agents."
+description: "HTML template structure and formatting rules for clean, platform-agnostic lessons (Skool-compatible by default — no inline styles, no JS, no div wrappers). Auto-loaded by Lesson Writer and Quality Reviewer agents."
 ---
 
 # {{PROJECT_NAME}} Lesson Template
@@ -59,23 +59,7 @@ Main lesson content. Each major topic gets an H2. Subtopics get H3. Use `<hr>` b
 <p>[Content]</p>
 ```
 
-### 5. Health Break (REQUIRED)
-
-Place at approximately the midpoint of the lesson.
-
-```html
-<hr>
-
-<h2>Health Break</h2>
-
-<p><img src="../assets/health-break-<exercise-slug>.png" alt="illustration of the exercise"></p>
-
-<p><strong>[Exercise Type]:</strong> [Specific instructions — breathing, stretching, grounding, hydration]</p>
-```
-
-Health break image filename uses the exercise slug (e.g., `health-break-box-breathing.png`, `health-break-full-body-stretch.png`). Always `.png` format.
-
-### 6. Reflect & Share
+### 5. Reflect & Share
 
 ```html
 <hr>
@@ -94,7 +78,7 @@ Health break image filename uses the exercise slug (e.g., `health-break-box-brea
 <p><a href="https://skool.com/YOUR_COMMUNITY">Post in YOUR_COMMUNITY</a></p>
 ```
 
-### 7. Checkpoint
+### 6. Checkpoint
 
 ```html
 <hr>
@@ -117,7 +101,7 @@ Health break image filename uses the exercise slug (e.g., `health-break-box-brea
 <p><strong>Stuck?</strong> Post in <a href="https://skool.com/YOUR_COMMUNITY">#setup-help</a> with screenshots.</p>
 ```
 
-### 8. What's Next
+### 7. What's Next
 
 ```html
 <hr>
@@ -266,18 +250,6 @@ Skool uses a simplified HTML editor. These rules are NON-NEGOTIABLE:
 
 <p>[Content...]</p>
 
-<!-- HEALTH BREAK (at midpoint) -->
-
-<hr>
-
-<h2>Health Break</h2>
-
-<p><img src="../assets/health-break-<exercise-slug>.png" alt="illustration of the exercise"></p>
-
-<p><strong>[Exercise]:</strong> [Instructions]</p>
-
-<!-- MORE CONTENT IF NEEDED -->
-
 <hr>
 
 <!-- REFLECT & SHARE -->
@@ -339,8 +311,6 @@ Skool uses a simplified HTML editor. These rules are NON-NEGOTIABLE:
 ### Image Assets (MANDATORY -- QAS blocks without these)
 - [ ] Hero image `<img>` present after H1 title block, before "What You'll Get"
 - [ ] Hero image src follows pattern `../assets/<M.S.L>-<slug>.png`
-- [ ] Health break image `<img>` present in Health Break section
-- [ ] Health break image src follows pattern `../assets/health-break-<exercise-slug>.png`
 - [ ] All image references use `.png` extension
 - [ ] All images have descriptive alt text
 
@@ -350,7 +320,6 @@ Skool uses a simplified HTML editor. These rules are NON-NEGOTIABLE:
 - [ ] Has "What You'll Get" with Business Terms + AKA
 - [ ] Has "What You'll Do" with activity overview
 - [ ] Has content sections with H2/H3 hierarchy
-- [ ] Has Health Break at midpoint
 - [ ] Has "Reflect & Share" with 3 questions
 - [ ] Has Checkpoint with ready-when items and common issues
 - [ ] Has "What's Next" with next lesson reference

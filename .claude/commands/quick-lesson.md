@@ -37,8 +37,7 @@ Spawn **Lesson Writer** agent (via Task tool):
 - Read `.claude/agents/lesson-writer.md` for agent instructions
 - Pass: plan path, clean transcript path, voice standard path, lesson template path
 - Agent writes HTML + MD directly to `<output-dir>/lessons/`
-- **Skip image references** — no hero image, no health break image in HTML
-- Health Break section still required but without `<img>` tag
+- **Skip image references** — no hero image in HTML
 
 ### Step 4: Build Journal
 
@@ -59,7 +58,7 @@ Append entry to `${BUILD_JOURNAL_PATH:-./build-journal}/YYYY-MM-DD.md` inline (s
 
 | Feature | /create-lesson | /quick-lesson |
 |---------|---------------|---------------|
-| Images (hero + health break) | Yes | No |
+| Hero image | Yes | No |
 | Slidev presentation | Yes | No |
 | QAS quality gate | Yes | No |
 | Research phase | Optional | No |
@@ -70,7 +69,6 @@ Append entry to `${BUILD_JOURNAL_PATH:-./build-journal}/YYYY-MM-DD.md` inline (s
 ## Notes
 
 - Voice standard still applies — lessons must sound like the configured voice
-- All required sections still present (What You'll Get, What You'll Do, Health Break, etc.)
-- Health Break section uses text-only instructions (no image)
+- All required sections still present (What You'll Get, What You'll Do, etc.)
 - Hero image placeholder can be added later if needed
 - Lesson can be upgraded to full pipeline later by running `/create-lesson` on the output

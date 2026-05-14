@@ -155,7 +155,7 @@ Task tool:
     Read your instructions at: .claude/agents/image-generator.md
 
     ## Task
-    Generate hero and health break images for lesson [M.S.L]: [Title]
+    Generate hero images for lesson [M.S.L]: [Title]
 
     ## Input Files (read these yourself)
     - Plan: <output-dir>/plan.md
@@ -167,7 +167,6 @@ Task tool:
 
     ## Naming
     - Hero image: <M.S.L>-<slug>.png
-    - Health break: health-break-<exercise-slug>.png
     - Lesson number: [M.S.L]
     - Lesson slug: [slug]
 
@@ -175,7 +174,7 @@ Task tool:
     Return ONLY: status, images created, any issues.
 ```
 
-**Do NOT proceed to Phase 5 without images. QAS will reject content missing hero or health break images.**
+**Do NOT proceed to Phase 5 without the hero image. QAS will reject content missing it.**
 
 ### Phase 5: Quality Gate (MANDATORY)
 

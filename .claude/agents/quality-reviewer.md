@@ -35,7 +35,7 @@ Do NOT return full file contents. Do NOT quote large sections of the files.
 Verify against `.claude/skills/lesson-template/SKILL.md`:
 
 **Structure:**
-- [ ] Has all required sections: What You'll Get, What You'll Do, Health Break, Reflect & Share, Checkpoint, What's Next
+- [ ] Has all required sections: What You'll Get, What You'll Do, Reflect & Share, Checkpoint, What's Next
 - [ ] Uses H1 for lesson title, H2 for major sections, H3 for subsections
 - [ ] No deeper than H4
 - [ ] Clean `<hr>` dividers between major sections
@@ -75,8 +75,8 @@ Read `.claude/skills/voice-standard/SKILL.md` for the full checklist, then verif
 Read `.claude/skills/presentation-template/SKILL.md` for the full checklist, then verify:
 
 - [ ] 10-18 slides total
-- [ ] Standard sequence: Cover > Content > Health Break > Checkpoint > What's Next
-- [ ] Uses Vue components (StrategyCard, InfoCard, CalloutCard, HealthBreak)
+- [ ] Standard sequence: Cover > Content > Checkpoint > What's Next
+- [ ] Uses Vue components (StrategyCard, InfoCard, CalloutCard)
 - [ ] Progressive reveals with `v-click`
 - [ ] Brand colors match the palette
 - [ ] Text is concise (slides are visual, not walls of text)
@@ -85,12 +85,8 @@ Read `.claude/skills/presentation-template/SKILL.md` for the full checklist, the
 
 - [ ] Hero image file exists in `assets/` directory (`.png`)
 - [ ] Hero image file exists in `presentations/public/images/` directory (`.png`)
-- [ ] Health break image file exists in `assets/` directory (`.png`)
-- [ ] Health break image file exists in `presentations/public/images/` directory (`.png`)
 - [ ] Lesson HTML `<img>` src for hero image matches actual filename in `assets/`
-- [ ] Lesson HTML `<img>` src for health break matches actual filename in `assets/`
 - [ ] Presentation hero slide image path matches actual filename in `presentations/public/images/`
-- [ ] HealthBreak component `image` prop matches actual filename in `presentations/public/images/`
 - [ ] All image files are `.png` format
 
 **Any missing image file or mismatched reference is an automatic BLOCKED verdict. Do not approve content without images.**

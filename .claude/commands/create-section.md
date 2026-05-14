@@ -177,7 +177,7 @@ Task tool:
     Read your instructions at: .claude/agents/image-generator.md
 
     ## Task
-    Generate hero and health break images for lesson [M.S.N]: [Title]
+    Generate hero images for lesson [M.S.N]: [Title]
 
     ## Input Files (read these yourself)
     - Plan: <output-dir>/plan.md
@@ -189,12 +189,11 @@ Task tool:
 
     ## Naming
     - Hero image: <M.S.N>-<slug>.png
-    - Health break: health-break-<exercise-slug>.png
     - Lesson number: [M.S.N]
     - Lesson slug: [slug]
 
     ## Deduplication
-    Check if health break image already exists before generating.
+    Check if hero image already exists before generating.
 
     ## Return Format
     Return ONLY: status, images created, any issues.

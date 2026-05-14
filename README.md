@@ -4,7 +4,20 @@ A Claude Code **Rig** that turns ideas, outlines, transcripts, and videos into a
 
 15 specialized sub-agents, 11 slash commands, a Quality Reviewer gate before every output, and 8 optional publishing integrations. Voice, brand, persona, and audience are all member-configurable — the Rig ships with a generic template and you make it yours via `/setup`.
 
-**The "create once, repurpose everywhere" motion.** Record one video. Run `/repurpose-social`. Walk away with: a YouTube package (title + chapters + description + thumbnail prompts), 7-9 standalone tweets, a 5-10 post X thread, a LinkedIn post + 60-second captioned clip, a 1500-word blog post, a 2000-word newsletter draft, and email/Telegram delivery of every artifact. Pipeline takes ~10-15 minutes; replaces a full editorial workflow.
+## Who This Is For
+
+**Creators and creator-educators** running a content engine on one or more platforms:
+
+- **Skool community owners and course creators.** Native support for publishing lessons straight to Skool via the `skool-publisher` skill (uses [Camofox](https://github.com/camoufox/camoufox) browser automation). Pipelines like `/create-lesson`, `/create-section`, `/create-module`, and `/repurpose-lesson` produce clean Skool-compatible HTML (no inline styles, no JS, structured headings) ready to drop into the editor.
+- **YouTubers and video-first creators.** `/create-video` builds the entire pre-production package (script + treatment + storyboard with AI-generated images). `/lesson-to-video` converts existing written content into a unified shoot package with `[SLIDE REF]` markers.
+- **Newsletter writers and bloggers.** `/repurpose-social` takes one transcript and produces a 1500-3000 word blog post, a Kit/ConvertKit-ready newsletter draft, an X thread, standalone tweets, a LinkedIn post, and captioned clips — all calibrated to your voice via `.claude/skills/voice-standard/SKILL.md`.
+- **Solo operators running educational content businesses** who want to record once, publish everywhere, and not spend half their week in a content editor.
+
+If you teach what you build — and you want the production overhead between "good idea" and "published artifact" to drop by an order of magnitude — this Rig is built for you.
+
+## The "create once, repurpose everywhere" motion
+
+Record one video. Run `/repurpose-social`. Walk away with: a YouTube package (title + chapters + description + thumbnail prompts), 7-9 standalone tweets, a 5-10 post X thread, a LinkedIn post + 60-second captioned clip, a 1500-word blog post, a 2000-word newsletter draft, and email/Telegram delivery of every artifact. Pipeline takes ~10-15 minutes; replaces a full editorial workflow.
 
 ## Requirements
 
@@ -75,7 +88,6 @@ output/<topic-slug>/
   README.md                          # Index + delivery notes
   assets/
     <M.S.L>-<slug>.png               # Hero image (Venice AI)
-    health-break-<exercise>.png      # Health break illustration
   lessons/
     <number>-<slug>.html             # Lesson HTML
     <number>-<slug>.md               # Lesson markdown
@@ -114,7 +126,7 @@ The Rig is **brand-agnostic out of the box**. The `/setup` wizard does the heavy
 |------|------------------|
 | `config/member-profile.md` | Identity, audience, signature phrases, pipeline preferences |
 | `config/theme.json` | Brand colors, fonts, logo filename, brand name (consumed by Slidev + Remotion cards) |
-| `config/persona.md` | Optional recurring character (for hero/health-break images + intro/outro cards). Leave empty for persona-free output. |
+| `config/persona.md` | Optional recurring character (for hero images + intro/outro cards). Leave empty for persona-free output. |
 | `config/image-style.md` | Venice AI Brand DNA prompt + negative prompt |
 | `.audience.txt` | Target audience paragraph (optional override; falls back to `member-profile.md`) |
 | `.claude/skills/voice-standard/SKILL.md` | **The big one.** Defines your voice — signature patterns, tone checklist, transformation rules, QAS checklist. The harness ships with a minimal generic version. See `examples/voice-standard-creator-voice.md` for a worked example. |
@@ -128,7 +140,7 @@ Each integration activates only when its env vars are set. Missing credentials =
 
 | Service | Env Vars | Used By |
 |---------|----------|---------|
-| Venice AI | `VENICE_API_KEY` | Image generation (hero, health break, storyboard) |
+| Venice AI | `VENICE_API_KEY` | Image generation (hero, storyboard) |
 | Mailgun | `MAILGUN_API_KEY` | Email delivery of outputs |
 | Telegram | `TELEGRAM_BOT_TOKEN` | Push notifications |
 | LinkedIn | `LINKEDIN_ACCESS_TOKEN` | Draft post creation with clip |

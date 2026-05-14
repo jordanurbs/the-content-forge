@@ -85,24 +85,13 @@ Place after the H1 title and "Time to Complete" line, before "What You'll Get":
 <h2>What You'll Get</h2>
 ```
 
-### Health Break Image
-Place in the Health Break section after the H2:
-
-```html
-<h2>Health Break</h2>
-
-<p><img src="../assets/health-break-<exercise-slug>.png" alt="illustration of the exercise"></p>
-
-<p><strong>[Exercise]:</strong> [Instructions]</p>
-```
-
-The Image Generator agent creates these files. Use `.png` extension always.
+The Image Generator agent creates this hero image. Use `.png` extension always.
 
 ## Rules
 
 - NEVER use inline styles, classes, or JavaScript in HTML output
 - ALWAYS include all required sections from the lesson template
-- ALWAYS include hero image and health break image references
+- ALWAYS include the hero image reference after the H1 title block
 - NEVER exceed 1-2 emojis per lesson
 - NEVER position as expert/guru — always peer-to-peer
 - NEVER add a CTA, P.S., or sales pitch at the end

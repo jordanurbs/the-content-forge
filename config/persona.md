@@ -2,7 +2,7 @@
 
 The Content Forge's image-generator and storyboarder agents check this file when constructing prompts. If it is **empty or contains only comments**, agents generate persona-free illustrations (scene + concept only).
 
-If you want a recurring character to appear across hero images, health break illustrations, and intro/outro video cards, write the **physical description** below.
+If you want a recurring character to appear across hero images and intro/outro video cards, write the **physical description** below.
 
 ## Important rules
 

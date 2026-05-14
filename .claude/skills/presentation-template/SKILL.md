@@ -11,8 +11,8 @@ This is the definitive template for creating Slidev presentations for {{PROJECT_
 ## Scaffold Location
 
 The Slidev scaffold lives at `samples/presentations/` and includes:
-- `components/` — Vue components (StrategyCard, InfoCard, CalloutCard, HealthBreak)
-- `layouts/` — Custom layouts (cover, default, health-break, two-col, three-col)
+- `components/` — Vue components (StrategyCard, InfoCard, CalloutCard)
+- `layouts/` — Custom layouts (cover, default, two-col, three-col)
 - `styles/base.css` — Brand theme CSS
 - `uno.config.ts` — UnoCSS shortcuts and theme colors
 - `global-top.vue` — optional HUD overlay (see config/persona.md)
@@ -163,23 +163,9 @@ Main content. Mix these patterns:
 </CalloutCard>
 ```
 
-### 11. Health Break (at midpoint)
+### 11-15. More Content Slides
 
-```markdown
----
-layout: health-break
----
-
-<HealthBreak title="Exercise Name" image="./images/health-break-<exercise-slug>.png" imageAlt="illustration of the exercise">
-  <p>Specific instructions for the health break activity.</p>
-</HealthBreak>
-```
-
-The Image Generator agent creates the health break image at `presentations/public/images/health-break-<exercise-slug>.png`. Always include the `image` and `imageAlt` props.
-
-### 12-15. More Content Slides
-
-Continue content after the health break.
+Continue building the lesson narrative.
 
 ### 16. Checkpoint
 
@@ -274,21 +260,6 @@ Props:
 - `icon` (optional) — Custom icon
 - `label` (optional) — Override default label
 
-### HealthBreak
-
-Health break exercise card with optional image.
-
-```html
-<HealthBreak title="Exercise Name" image="./images/health.png" imageAlt="Description">
-  <p>Exercise instructions</p>
-</HealthBreak>
-```
-
-Props:
-- `title` (string, required) — Exercise name
-- `image` (string, optional) — Image path
-- `imageAlt` (string, optional) — Alt text
-
 ---
 
 ## Brand Color Palette
@@ -303,7 +274,7 @@ Props:
 | `--navy-light` | `#2A3F5F` | Borders, subtle accents |
 | `--accent-gold` | `#FFA500` | Third accent, warnings |
 | `--warning-red` | `#FF4444` | Errors, critical callouts |
-| `--success-green` | `#00FF88` | Success states, health breaks |
+| `--success-green` | `#00FF88` | Success states |
 | `--text-primary` | `#FFFFFF` | Main headings, bold text |
 | `--text-secondary` | `#B0C4DE` | Body text, descriptions |
 | `--text-muted` | `#708090` | Subtle text, meta info |
@@ -356,7 +327,6 @@ This shows each card on successive clicks/arrow presses.
 - **Minimum**: 10 slides
 - **Maximum**: 18 slides
 - **Sweet spot**: 12-15 slides
-- Health break should fall around slide 8-10
 
 ---
 
@@ -377,8 +347,6 @@ Set `fonts.provider: none` in frontmatter (fonts are loaded by the theme).
 - [ ] Hero image slide present (REQUIRED) with `./images/<M.S.L>-<slug>.png`
 - [ ] "What You'll Master" slide with 3 StrategyCards
 - [ ] Content slides use Vue components (not raw HTML cards)
-- [ ] Health break at midpoint using health-break layout
-- [ ] HealthBreak component includes `image` prop with `./images/health-break-<exercise-slug>.png`
 - [ ] Checkpoint slide with ready-when + common concerns
 - [ ] What's Next slide with next lesson preview
 - [ ] Progressive reveals (`v-click`) on key content

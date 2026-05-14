@@ -66,7 +66,7 @@ For each section, run the section pipeline:
 3. **Sequential lesson generation** -- one lesson at a time:
    - Spawn Lesson Writer (max_turns: 25)
    - Spawn Presentation Designer (max_turns: 25)
-   - Spawn Image Generator (max_turns: 10) — hero + health break images **(MANDATORY)**
+   - Spawn Image Generator (max_turns: 10) — hero (per lesson) **(MANDATORY)**
    - Track output file paths
 4. **Section quality review** -- spawn Quality Reviewer for the section's files (model: opus, max_turns: 15)
    - If BLOCKED: fix and re-review (max 2 iterations)

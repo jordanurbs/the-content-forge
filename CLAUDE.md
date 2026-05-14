@@ -76,7 +76,7 @@ During every pipeline run, keep a running list of improvements, procedural chang
 | **Presentation Designer** | Creates Slidev slide decks | Building presentations for lessons |
 | **Quality Reviewer** | **GATE**: Validates voice, structure, brand | Before any output is finalized |
 | **Transcript Processor** | Transcription + correction | Processing video/audio files |
-| **Image Generator** | Generates hero + health break images via Venice AI | After content generation, before QAS |
+| **Image Generator** | Generates hero images via Venice AI | After content generation, before QAS |
 | **YouTube Packager** | YouTube titles, descriptions, chapters, thumbnails | YouTube content optimization |
 | **Script Writer** | Talking-points video scripts from any input | `/create-video` Phase 3 |
 | **Script Editor** | YouTube engagement optimization (retention, hooks) | `/create-video` Phase 4 |
@@ -117,9 +117,9 @@ Agent definitions live in `.claude/agents/`. Each agent has specific tools and r
 ### Phase 4.5: Image Generation
 
 - Spawn Image Generator for each lesson
-- Generates hero image (lesson topic) + health break image (exercise)
+- Generates hero image (lesson topic)
 - Saves to `assets/` (for HTML) and `presentations/public/images/` (for Slidev)
-- Health break images are deduplicated (same exercise across lessons reuses the image)
+- Hero images are deduplicated by filename (skip if file already exists)
 - Requires `VENICE_API_KEY` — skipped gracefully if missing
 
 ### Phase 5: Quality Gate (MANDATORY)
@@ -264,11 +264,11 @@ For the Quality Reviewer, use `model: opus` for thorough review.
 - Voice: matches `.claude/skills/voice-standard/SKILL.md`
 - Emoji budget: respects what's defined in voice-standard (default: max 1-2 decorative)
 - HTML: No inline styles/classes/JS, all required sections present
-- Sections: What You'll Get, What You'll Do, Health Break, Reflect & Share, Checkpoint, What's Next
-- Presentation: 10-18 slides, cover/health-break/checkpoint/what's-next
+- Sections: What You'll Get, What You'll Do, Reflect & Share, Checkpoint, What's Next
+- Presentation: 10-18 slides, cover/checkpoint/what's-next
 - Cross-links: "What's Next" correctly links between lessons
 - Brand: audience terminology matches voice-standard
-- Images: Hero + health break images exist in both `assets/` and `presentations/public/images/`, HTML/presentation references match filenames
+- Images: Hero image exists in both `assets/` and `presentations/public/images/`, HTML/presentation references match filenames
 
 ## Output Structure
 
@@ -277,7 +277,6 @@ output/<topic-slug>/
   README.md
   assets/
     <M.S.L>-<slug>.png              # Hero image
-    health-break-<exercise>.png     # Health break image
   lessons/
     <number>-<slug>.html
     <number>-<slug>.md
@@ -286,7 +285,6 @@ output/<topic-slug>/
     public/
       images/
         <M.S.L>-<slug>.png          # Hero image (copy)
-        health-break-<exercise>.png # Health break (copy)
     slides/
       <number>.md
 ```
@@ -520,7 +518,7 @@ Define your creator voice in `.claude/skills/voice-standard/SKILL.md`. The Rig s
 
 ### Persona (Optional)
 
-If you want a recurring character to appear in lesson hero images, health break illustrations, and intro/outro video cards, define their physical description in `config/persona.md`. Image-generator and storyboarder will use it. If empty, persona-free illustrations are produced.
+If you want a recurring character to appear in lesson hero images and intro/outro video cards, define their physical description in `config/persona.md`. Image-generator and storyboarder will use it. If empty, persona-free illustrations are produced.
 
 ### Theme (Colors, Fonts, Brand Logo)
 
@@ -574,11 +572,9 @@ Requires `VENICE_API_KEY` in `.env`. All image generation is skipped gracefully 
 
 **Image types:**
 - **Hero image**: One per lesson, illustrates the topic. Filename: `<M.S.L>-<slug>.png`
-- **Health break image**: One per lesson, person doing the exercise (or your configured persona if defined). Filename: `health-break-<exercise-slug>.png`
-
 **Brand DNA** is read from `config/image-style.md`. **Negative prompt** is configurable in the same file.
 
-Images are saved to both `assets/` (for lesson HTML) and `presentations/public/images/` (for Slidev). Health break images are deduplicated — same exercise across lessons reuses the same file.
+Images are saved to both `assets/` (for lesson HTML) and `presentations/public/images/` (for Slidev). Image-generator skips regeneration if the target file already exists (deduplication by filename).
 
 ## Diagram Generation (HTML/SVG -> PNG)
 
@@ -591,7 +587,7 @@ For **technical concept diagrams** (architecture flows, comparison charts, proto
 4. Keep `diagrams.html` + `screenshot.mjs` in the output dir for re-rendering
 
 **When to use Venice AI vs HTML/SVG:**
-- Venice AI: artistic illustrations, hero images, health break images, storyboard B-roll
+- Venice AI: artistic illustrations, hero images, storyboard B-roll
 - HTML/SVG: architecture diagrams, protocol flows, comparison charts, folder trees, anything with precise text labels
 
 ## Remotion Card Types
@@ -649,8 +645,8 @@ If `.audience.txt` exists in this directory, its contents override the default. 
 
 The presentation scaffold lives at `harness-templates/presentations/`. When creating lesson presentations, copy the scaffold (excluding `node_modules/`) to the output directory. The scaffold includes:
 
-- `components/` — StrategyCard, InfoCard, CalloutCard, HealthBreak
-- `layouts/` — cover, default, health-break, two-col, three-col
+- `components/` — StrategyCard, InfoCard, CalloutCard
+- `layouts/` — cover, default, two-col, three-col
 - `styles/base.css` — Theme (reads CSS vars; customize via `config/theme.json`)
 - `uno.config.ts` — UnoCSS shortcuts
 

@@ -40,14 +40,6 @@
 
 ---
 
-## Health Break
-
-![illustration of the exercise](../assets/health-break-box-breathing.png)
-
-**Box Breathing:** Inhale 4 counts. Hold 4 counts. Exhale 4 counts. Hold 4 counts. Repeat 3 times.
-
----
-
 ## [Final Concept Section]
 
 [Tie everything together. Show the why behind the what.]
