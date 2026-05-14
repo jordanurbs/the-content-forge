@@ -182,6 +182,18 @@ Plus the harness-specific scaffolding:
 | `/quick-lesson` | Lightweight transcript-to-lesson |
 | `/repurpose-social` | Cross-platform social repurposing |
 
+## Want More Rigs? Want to Build Your Own?
+
+This Rig is one of several built by the **[AI Captains Academy](https://skool.com/aicaptains)** community — a Skool community for creators and builders learning to ship production AI workflows with Claude Code.
+
+Inside you'll find:
+
+- **More Rigs** — Lead Getter, AEO/SEO Audit, Content Strategy, and others. Same `.claude/` + `config/` + `output/` pattern. MIT-licensed. Run them on your own business or for prospects.
+- **Lessons on how Rigs are built** — multi-agent orchestration, context engineering, skill design, quality gates, and the SAFe agentic workflow pattern.
+- **The community of builders** shipping Rigs in public — share what you build, see what others have built, get unstuck fast.
+
+Join us at **[skool.com/aicaptains](https://skool.com/aicaptains)**.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
@@ -193,4 +205,4 @@ This Rig is **yours.** Fork it, modify it, sell with it. The MIT license is perm
 - Built on the [Claude Code](https://claude.com/claude-code) multi-agent harness pattern.
 - The `stop-slop` skill incorporates [Hardik Pandya's stop-slop](https://github.com/hardikpandya/stop-slop) (MIT).
 - Inspired by the safe-agentic-workflow pattern by Bybren LLC.
-- Forked from the AICA Lessons harness used by [AI Captains Academy](https://aicaptains.academy).
+- Forked from the AICA Lessons harness used by [AI Captains Academy](https://skool.com/aicaptains) — the community for builders shipping AI workflows.
